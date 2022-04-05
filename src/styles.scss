@@ -1,1 +1,58 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+:root {
+  --theme-color: #f37037;
+}
+.common-btn:hover {
+  background-color: hsla(0, 0%, 100%, 0.486);
+}
+.common-btn {
+  padding: 10px;
+  border-radius: 29px;
+  width: 134px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+ngx-star-rating {
+  display: flex;
+  justify-content: flex-start;
+  label.star {
+    font-size: 23px !important;
+    padding: 4px !important;
+  }
+  label.star:hover {
+    transform: none !important;
+  }
+}
+.btn-common {
+  border: 1px solid gray;
+  width: 150px;
+  height: 45px;
+  background: var(--theme-color);
+  color: white;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+}
+.btn-common:hover {
+  box-shadow: 1px 1px 1px 1px rgb(233, 229, 229);
+}
+input.star-5:checked ~ label.star:before {
+  color: #fd4 !important;
+  transition: all 0.25s !important;
+  text-shadow: none !important;
+}
+// input.star:checked ~ label.star:before {
+//   color: var(--theme-color) !important;
+// }

@@ -1,0 +1,45 @@
+<div class="filters-data">
+    <div class="filter-heading">
+        <h1>Filters</h1>
+        <p>Clear</p>
+    </div>
+    <div class="filterList">
+        <div *ngFor="let item of data" class="list">
+            <div class="filter-name" *ngIf="!item.isRating">
+                <div class="filter-head">
+                    <mat-icon>{{getIconBasedOntype(item.type)}}</mat-icon>{{item.filterName}}
+                </div>
+                <div (click)="openCollapser(item)">
+                    <mat-icon>{{item.isCollapsed ? 'remove' : 'add' }}</mat-icon>
+                </div>
+            </div>
+            <ng-container *ngIf="item.isCollapsed">
+                <div class="filter-name city" *ngFor="let city of item.cityList">
+                    <div>{{city.name}}</div>
+                    <div (click)="openCollapser(city)">
+                        <mat-checkbox color="primary" [(ngModel)]="city.isChecked"></mat-checkbox>
+                    </div>
+                </div>
+            </ng-container>
+            <div class="filter-name" *ngIf="item.isRating">
+                <div class="filter-head">
+                    <mat-icon>{{getIconBasedOntype(item.type)}}</mat-icon>{{item.filterName}}
+                </div>
+                <div (click)="openCollapser(item)">
+                    <mat-icon>{{item.isCollapsed ? 'remove' : 'add' }}</mat-icon>
+                </div>
+            </div>
+            <ng-container *ngIf="item.isRating && item.isCollapsed">
+                <div class="filter-name city" *ngFor="let rat of item.ratingList">
+                    <div>
+                        <ngx-star-rating [id]="'rating'" [(ngModel)]="rat.ratingValue" [disabled]="true"></ngx-star-rating>
+                    </div>
+                    <div (click)="openCollapser(item)">
+                        <mat-checkbox color="primary" [(ngModel)]="rat.isChecked"></mat-checkbox>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+       
+    </div>
+</div>

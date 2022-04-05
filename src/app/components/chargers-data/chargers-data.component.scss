@@ -1,0 +1,66 @@
+.charger-data {
+  padding: 1.5rem 1rem;
+}
+.card-body h1 {
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.card-data {
+  width: 100%;
+  display: flex;
+  border: 1px solid #bcb6b6;
+  padding: 7px;
+  .card-left {
+    width: 30%;
+  }
+  .card-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 66px 0;
+    align-items: end;
+    width: 20%;
+  }
+  .card-middle {
+    width: 50%;
+    margin-left: 18px;
+    h2 {
+      margin: 0;
+    }
+  }
+}
+.rating-section {
+  display: flex;
+  span {
+    background: green;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 5px;
+  }
+}
+
+.section-common {
+  padding: 12px 0px 0px 0px;
+  margin: 0;
+  font-weight: 500;
+}
+.phone-number {
+  font-size: 16px;
+  color: black;
+  font-weight: 500;
+}
+.map-view {
+  display: flex;
+  align-items: center;
+  p {
+    padding: 0;
+  }
+}
+.port {
+  .port-types {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+}

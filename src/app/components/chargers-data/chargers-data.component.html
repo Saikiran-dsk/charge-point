@@ -1,0 +1,41 @@
+<div class="charger-data">
+    <h1>
+        Locate From 833 EV Charging Stations Found In India
+    </h1>
+    <div class="card-data col" *ngFor="let item of cardsData">
+        <div class="card-left">
+            <img src="../../../assets/charger.jpg" class="card-img-top" alt="...">
+        </div>
+
+        <div class="card-middle">
+            <h2>{{item.name}}</h2>
+            <div class="rating-section">
+                <span>4.5</span>
+                <!-- <ngx-star-rating [(ngModel)]="4" [id]="'rating'" [disabled]="true"></ngx-star-rating> -->
+            </div>
+            <p class="section-common">{{item.address}}</p>
+            <p class="section-common">{{item.city}}</p>
+            <p class="section-common phone-number">{{item.phone}}</p>
+            <p class="section-common">&#8377;{{item.minPrice}} - &#8377;{{item.maxPrice}}</p>
+            <p class="section-common">Waiting time (minimum): <span>{{item.waitingTime}}</span></p>
+            <div class="port">
+                <h3 class="section-common">Available Charge points</h3>
+                <div class="port-types">
+                <ng-container *ngFor="let type of item.chargePoints">
+                    <mat-icon *ngIf="type=='car'"> directions_car</mat-icon>
+                    <mat-icon *ngIf="type=='bus'"> directions_bus</mat-icon>
+                    <mat-icon *ngIf="type=='bike'">motorcycle</mat-icon>
+                </ng-container>
+                </div>
+            </div>
+        </div>
+        <div class="card-right">
+            <div class="map-view btn-common" (click)="openDialog()">
+                <mat-icon> location_on</mat-icon>
+                <p class="section-common">View on Map</p>
+            </div>
+            <div><button class="btn-common">Book Now</button></div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.header {
+  height: 80px;
+  background: var(--theme-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  color: white;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  .header-left {
+    img {
+      width: 200px;
+    }
+  }
+  .header-right {
+    display: flex;
+  }
+}
+mat-icon {
+  margin-right: 1px;
+}
