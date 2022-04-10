@@ -1,0 +1,29 @@
+<div class="booking-page">
+    <div class="book-card" *ngIf="!paymentSuccess">
+    <div><h1>Book Charger</h1></div>
+    <h3>Select your Availbilty</h3>
+
+    <div class="convi-cost time-slots">
+        <div *ngFor="let ts of timeStamp" class="time-lap" [ngClass]="{'active' : ts.isActive && ts.isAvailble, 'disable-time' : !ts.isAvailble  }" (click)="selectTime(ts)">{{ts.time }}</div>
+    </div>
+    <div class="booking-cost">
+        <div>Charge cost:</div>
+        <div>&#8377;{{200 * count}}</div>
+    </div>
+    <div class="booking-cost convi-cost">
+        <div>convininec cost:</div>
+        <div>&#8377;20</div>
+    </div>
+     <div class="booking-cost convi-cost total-cost">
+        <div>Total:</div>
+        <div>&#8377;{{(200 * count) + ( count ? 20 : 0)}}</div>
+    </div>
+   
+    <div class="payment-button convi-cost" (click)="updatePayement()">
+        <button class="btn-common">Proceed to Payment</button>
+    </div>
+    </div>
+    <div *ngIf="paymentSuccess" class="success-payment">
+        <div>Your booking successfully completed.......!!!</div>
+    </div>
+</div>

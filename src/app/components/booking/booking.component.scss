@@ -1,0 +1,71 @@
+.booking-page{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+}
+.booking-cost{
+    display: flex;
+    justify-content: space-between;
+}
+.book-card{
+    width: 30%;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 5%), 0 1px 6px rgb(0 0 0 / 5%);
+    padding: 23px;  
+    overflow: hidden; 
+    position: relative; 
+}
+.convi-cost{
+    margin-top: 20px;
+}
+.time-lap{
+    width: 133px;
+    border: 1px solid #ddd2d2;
+    box-shadow: 0 1px 6px rgb(0 0 0 / 5%), 0 1px 6px rgb(0 0 0 / 5%);
+    margin-right: 12px;
+    border-radius: 13px;
+    cursor: pointer;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.time-slots{
+    display: flex;
+    width: 2000px;
+    margin-bottom:15px;
+    .active{
+        background: var(--theme-color);
+        color: #fff;
+        
+    }
+}
+.total-cost{
+ border-top:  1px solid #ddd2d2;
+}
+.payment-button{
+    position: absolute;
+    width: 85%;
+    bottom: 18px;
+    button{
+        width: 100%;
+        border-radius: 32px;
+        margin-top: 30px;
+    }
+}
+.disable-time{
+    background: lightgrey;
+    opacity: 0.5;
+}
+.success-payment{
+    margin-top: 38px;
+    background: #e8e4e4;
+    height: 54px;
+    color: green;
+    font-weight: 900;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 57px;
+}

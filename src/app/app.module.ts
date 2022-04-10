@@ -21,6 +21,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ViewMapComponent } from './components/view-map/view-map.component';
 
 import { AgmCoreModule } from '@agm/core';
+import { BookingComponent } from './components/booking/booking.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,8 @@ import { AgmCoreModule } from '@agm/core';
     HomeComponent,
     ServicesComponent,
     AboutUsComponent,
-    ViewMapComponent
+    ViewMapComponent,
+    BookingComponent
   ],
   imports: [
     BrowserModule,

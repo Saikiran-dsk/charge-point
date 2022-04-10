@@ -12,6 +12,7 @@ export class ChargersDataComponent implements OnInit {
 
   cardsData = [
     {
+      id: 1,
       name: 'Sasha charge point ',
       address: 'address 1',
       phone: '9988998899',
@@ -30,6 +31,7 @@ export class ChargersDataComponent implements OnInit {
       waitingTime: '1h'
     },
     {
+      id: 2,
       name: 'Sasha charge point',
       address: 'address 2',
       phone: '9988998899',
@@ -45,9 +47,10 @@ export class ChargersDataComponent implements OnInit {
       nearByLocation: ['KPHP', 'Kukatapally'],
       chargePoints: ['car', 'bike', 'bus'],
       opensAt: '24/7',
-      waitingTime: '20m'
+      waitingTime: '20m',
     },
     {
+      id: 3,
       name: 'Sasha charge point',
       address: 'address 3',
       phone: '9988998899',
@@ -66,6 +69,7 @@ export class ChargersDataComponent implements OnInit {
       waitingTime: '2h'
     },
     {
+      id: 4,
       name: 'Sasha charge point',
       address: 'address 4',
       phone: '9988998899',
@@ -84,6 +88,7 @@ export class ChargersDataComponent implements OnInit {
       waitingTime: '0'
     },
     {
+      id: 5,
       name: 'Sasha charge point',
       address: 'address 5',
       phone: '9988998899',
@@ -102,6 +107,7 @@ export class ChargersDataComponent implements OnInit {
       waitingTime: '2h'
     },
     {
+      id: 6,
       name: 'Sasha charge point',
       address: 'address 6',
       phone: '9988998899',
